@@ -4,7 +4,9 @@
     position: relative;
     width: 400px;
     height: 400px;
-    top: 250px;
+    /* commented out to make appear above player *
+    top: 250px; 
+    */
     bottom: 0;
     left: 0;
     right: 0;
@@ -33,10 +35,10 @@
       width: 350px;
       height: 350px;
     }
-  
+    
     .swiper {
       grid-area: slider;
-    }
+    } 
        
   }
   /*Fullscreen Images*/
@@ -58,5 +60,42 @@
     background-position: center 0px;
 }
 
-  
+/* START spotify-player css */ 
+
+#musicSection {
+  position: relative; 
+    bottom: 0; 
+    left: 0; 
+    z-index: 10;
+} 
+
+.episodes {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .episode {
+      min-width: max-content;
+      margin-bottom: .8rem;
+      padding: .8rem 1rem;
+      border-radius: 10px;
+      border: 0;
+      background: #214ac4;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .episode:hover {
+      background: #1Db954;
+    }
+
+  /* 
+    @media screen and (min-width: 860px) {
+      body {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+      }
+    }
+  END spotify-player css */ 
   

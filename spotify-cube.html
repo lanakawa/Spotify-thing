@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="style.css">
     <script src="spotify-cube.js" type="module"></script>
+    <script src="spotify-player.js" type="module"></script>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -18,7 +19,12 @@
   <div class="background1"></div>
   <div class="background2"></div>
   <div class="background3"></div>
+
+<!-- Container for overall page layout -->
+<div class="container" >
+
   <!--Swiper/cube-->
+  <div class="row">
     <div id="main-swiper" class="swiper">
       <div class="swiper-wrapper">
         <!--Slider Picture 1  -->
@@ -38,8 +44,37 @@
         <div class="swiper-slide">
           <img id="img4" src="https://github.com/lanakawa/Spotify-thing/blob/main/images/img4crop.png?raw=true" />
         </div>
+
       </div>
     </div>
+  </div>
+  <!-- END swiper/cube section -->
 
+  <!-- Music Section -->
+  <div class="row" id="musicSection">
+    <!-- Episode List --> 
+    <div class="episodes col">
+      <button class="episode" data-spotify-id="spotify:track:3WS1OpKVyB5oWYzh95afV5">
+        Ekolu - Shores of Waiehu
+      </button>
+      <button class="episode" data-spotify-id="spotify:track:6jRyCWUAnRVir3OK4jSZvV">
+        Kenshi Yonezu - Sayonara
+      </button>
+      <button class="episode" data-spotify-id="spotify:track:6t7NNXHVn6gH35q6sf6ABX">
+        All Time Low - Keep the change, you filthy animal
+      </button>
+    </div>
+    <!-- END episode list -->
+
+    <!-- Embed Spotify Player --> 
+    <div class="col">
+      <div id="embed-iframe"></div>
+      <script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
+    </div>
+    <!-- END Spotify Player -->  
+  </div> <!-- END of #musicSection -->
+
+
+</div> <!-- END of page layout container -->
 </body>
 </html>
